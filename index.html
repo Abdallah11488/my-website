@@ -1,266 +1,521 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
 <head>
-    <section class="hero">
-<img src="Screenshot_٢٠٢٦٠٧٢٣_٢٣٠٢١١_Gallery.jpg" alt="صورتي الشخصية" class="profile">
-<h2>مرحباً بكم في موقعي الشخصي</h2>
-
-<p>
-أنا عبدالله محمد ضحوي، أشارك عبر هذا الموقع أعمالي، ومنشوراتي، وأخباره، وكل ما هو جديد.
-</p>
-
-<a class="btn" href="#posts">آخر المنشورات</a>
-
-    </section>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>موقعي الشخصي</title>
+<title>عبدالله محمد ضحوي</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
-    <header>
-<div class="news-bar">
-<marquee direction="right">
-📢 مرحبًا بكم في الموقع الرسمي لعبدالله محمد ضحوي | تابع آخر الأخبار والمنشورات والفعاليات أولًا بأول.
-</marquee>
-</div>
+font-family:Tahoma,Arial,sans-serif;
+background:#f4f6f9;
+color:#222;
+}
 
-<h1>عبدالله محمد ضحوي</h1>
+header{
+background:#0d47a1;
+color:#fff;
+padding:15px;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
 
-<nav>
-<a href="#about">من أنا</a>
-<a href="#posts">المنشورات</a>
-<a href="#contact">تواصل معي</a>
-<a href="cv.html">السيرة الذاتية</a>
-</nav>
+.logo{
+font-size:30px;
+font-weight:bold;
+text-align:center;
+margin-bottom:10px;
+}
 
-</header>
-    margin:0;
-    font-family:Tahoma,Arial,sans-serif;
-    background:linear-gradient(135deg,#4facfe,#00f2fe);
-    color:white;
-    text-align:center;
+nav{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:10px 15px;
+border-radius:8px;
+transition:.3s;
+font-weight:bold;
+}
+
+nav a:hover{
+background:white;
+color:#0d47a1;
+}
+
+.news{
+background:#c62828;
+color:#fff;
+padding:10px;
+font-weight:bold;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.news span{
+display:inline-block;
+padding-left:100%;
+animation:move 18s linear infinite;
+}
+
+@keyframes move{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+.hero{
+background:linear-gradient(135deg,#1565c0,#42a5f5);
+color:white;
+padding:70px 20px;
+text-align:center;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid white;
+object-fit:cover;
+box-shadow:0 0 25px rgba(0,0,0,.3);
+}
+
+.hero h1{
+margin-top:20px;
+font-size:40px;
+}
+
+.hero p{
+margin-top:15px;
+font-size:20px;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:white;
+color:#1565c0;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 .container{
-    margin-top:50px;
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
 }
 
-img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:5px solid white;
-    object-fit:cover;
-    box-shadow:0 0 20px rgba(0,0,0,.4);
+.title{
+text-align:center;
+font-size:35px;
+color:#0d47a1;
+margin-bottom:35px;
 }
 
-h1{
-    margin-top:20px;
-    font-size:40px;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
-p{
-    font-size:20px;
-    width:80%;
-    margin:auto;
-    line-height:1.8;
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
 }
 
-.btn{
-    display:inline-block;
-    margin:15px;
-    padding:12px 30px;
-    background:white;
-    color:#0077cc;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.3s;
+.card:hover{
+transform:translateY(-10px);
 }
 
-.btn:hover{
-    background:#e8e8e8;
-}.container{
-    animation: fadeIn 1.5s ease;
+.card h3{
+color:#1565c0;
+margin-bottom:10px;
 }
 
-img{
-    animation: zoomIn 1.5s ease;
+.card p{
+line-height:1.8;
 }
 
-.btn{
-    transition: 0.3s;
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
 }
 
-.btn:hover{
-    transform: scale(1.1);
+.social{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+flex-wrap:wrap;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes zoomIn{
-    from{
-        transform:scale(0.5);
-        opacity:0;
-    }
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
-} .container{
-    animation: fadeIn 1.5s ease;
-}
-
-img{
-    animation: zoomIn 1.5s ease;
-}
-
-.btn{
-    transition: 0.3s;
-}
-
-.btn:hover{
-    transform: scale(1.1);
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes zoomIn{
-    from{
-        transform:scale(0.5);
-        opacity:0;
-    }
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
-}.social a{
-    display:block;
-    margin:12px auto;
-    width:220px;
-    padding:12px;
-    background:#1877f2;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.3s;
+.social a{
+text-decoration:none;
+background:white;
+padding:12px 18px;
+border-radius:10px;
+font-weight:bold;
+color:#0d47a1;
+transition:.3s;
 }
 
 .social a:hover{
-    transform:scale(1.08);
-    background:#0d5ec9;
-} 
+transform:scale(1.1);
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
+<div class="logo">
+عبدالله محمد ضحوي
+</div>
 
+<nav>
 
-<h1>مرحباً، أنا عبد الله</h1>
+<a href="#home">الرئيسية</a>
+
+<a href="#about">من أنا</a>
+
+<a href="#posts">المنشورات</a>
+
+<a href="#contact">تواصل معي</a>
+
+</nav>
+
+</header>
+
+<div class="news">
+<span>
+مرحباً بكم في الموقع الرسمي لعبدالله محمد ضحوي | تابع آخر الأخبار والمنشورات أولاً بأول
+</span>
+</div>
+
+<section class="hero" id="home">
+
+<img src="Screenshot_٢٠٢٦٠٧٢٣_٢٣٠٢١١_Gallery.jpg">
+
+<h1>عبدالله محمد ضحوي</h1>
 
 <p>
-أهلاً بك في موقعي الشخصي.
-أشارك هنا أعمالي ومشاريعي وكل ما يتعلق ببرمجة المواقع والتقنية.
+
+إعلامي ومتطوع، أرحب بكم في موقعي الشخصي حيث أشارك أعمالي ومنشوراتي وأحدث أخباري.
+
 </p>
 
-<a class="btn" href="#about">من أنا</a>
-<a class="btn" href="#contact">تواصل معي</a>
-<a class="btn" href="cv.html" target="_blank">📄 السيرة الذاتية</a>
+<a class="btn" href="#posts">
 
+آخر المنشورات
 
-<section id="about" ...
-    <h2>من أنا</h2>
-    <p>
-        اسمي عبد الله، وأنا مهتم بتصميم وبرمجة المواقع الإلكترونية،
-        وأسعى لتطوير مهاراتي وبناء مشاريع مفيدة.
-    </p>
-</section><section id="contact" style="background:#ffffff; color:black; padding:40px;">
-    
+</a>
 
-    <h2>تواصل معي</h2>
+</section>
+<section class="container" id="about">
+
+<h2 class="title">من أنا</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>نبذة شخصية</h3>
+
+<p>
+
+أنا عبدالله محمد ضحوي، إعلامي ومتطوع، أسعى لتقديم محتوى هادف وخدمة المجتمع عبر الإعلام والعمل التطوعي.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>المهارات</h3>
+
+<p>
+
+• التواصل الفعال<br>
+
+• إدارة الوقت<br>
+
+• إعداد وتقديم البرامج<br>
+
+• العمل الجماعي
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>الخبرات</h3>
+
+<p>
+
+خبرة في تقديم البرامج الإعلامية والعمل ضمن الفرق التطوعية والمشاركة في المبادرات المجتمعية.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="container" id="posts">
+
+<h2 class="title">آخر المنشورات</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>افتتاح الموقع الرسمي</h3>
+
+<p>
+
+مرحباً بكم في موقعي الشخصي، سيتم نشر جميع أخباري وأعمالي هنا.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>الإعلام والعمل التطوعي</h3>
+
+<p>
+
+أؤمن بأن الإعلام رسالة، والعمل التطوعي وسيلة لخدمة المجتمع وبناء مستقبل أفضل.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>قريباً</h3>
+
+<p>
+
+سيتم إضافة أخبار جديدة، وصور، ومقالات، وأعمال إعلامية بشكل مستمر.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="container" id="contact">
+
+<h2 class="title">
+
+تواصل معي
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>واتساب</h3>
+
+<p>
+
+<a href="https://wa.me/256727876367">
+
+راسلني عبر واتساب
+
+</a>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>البريد الإلكتروني</h3>
+
+<p>
+
+abdallah0114887314@gmail.com
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>فيسبوك</h3>
+
+<p>
+
+<a href="https://www.facebook.com/share/18snrZ22wr/">
+
+صفحتي على فيسبوك
+
+</a>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>إنستغرام</h3>
+
+<p>
+
+<a href="https://www.instagram.com/abdallah_dahwi_salih?igsh=MXM0Y29qYzVmaHRkaw==">
+
+حسابي على إنستغرام
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<footer>
+
+<h2>عبدالله محمد ضحوي</h2>
+
+<p>
+
+شكراً لزيارتكم موقعي الشخصي.
+
+</p>
 
 <div class="social">
 
-<a href="https://wa.me/256727876367" target="_blank">🟢 واتساب</a>
+<a href="https://wa.me/256727876367">
+واتساب
+</a>
 
-<a href="https://www.facebook.com/share/18snrZ22wr/" target="_blank">🔵 فيسبوك</a>
+<a href="https://www.facebook.com/share/18snrZ22wr/">
+فيسبوك
+</a>
 
-<a href="https://www.instagram.com/abdallah_dahwi_salih?igsh=MXM0Y29qYzVmaHRkaw==" target="_blank">📸 إنستغرام</a>
+<a href="https://www.instagram.com/abdallah_dahwi_salih?igsh=MXM0Y29qYzVmaHRkaw==">
+إنستغرام
+</a>
 
 </div>
 
+<p style="margin-top:25px">
 
+© 2026 جميع الحقوق محفوظة
 
-    <p>📧 البريد الإلكتروني: abdallah0114887314@gmail!com</p>
-</section>
-    <section id="posts">
+</p>
 
-<h2 style="text-align:center;margin:40px 0;">📰 آخر الأخبار</h2>
+</footer>
 
-<div class="card">
-<h3>افتتاح موقعي الرسمي</h3>
-<p>تم إطلاق موقعي الشخصي لنشر أخباري وأعمالي ومشاريعي وكل جديد.</p>
-<a href="#">اقرأ المزيد ←</a>
-</div>
+<button id="topBtn">
 
-<div class="card">
-<h3>آخر نشاط إعلامي</h3>
-<p>شاركت في عدد من الفعاليات والبرامج الإعلامية والعمل التطوعي، وسيتم نشر التفاصيل قريبًا.</p>
-<a href="#">اقرأ المزيد ←</a>
-</div>
+⬆
 
-<div class="card">
-<h3>مشروع جديد</h3>
-<p>أعمل حاليًا على تطوير الموقع وإضافة خدمات وأقسام جديدة.</p>
-<a href="#">اقرأ المزيد ←</a>
-</div>
+</button>
 
-    </section>
-<section id="posts" style="background:#f5f5f5;color:#222;padding:40px 20px;">
-  <h2>📢 منشوراتي</h2>
+<style>
 
-  <div style="background:white;padding:20px;border-radius:12px;max-width:700px;margin:auto 0 20px auto;box-shadow:0 0 10px rgba(0,0,0,.1);">
-    <h3>أول منشور</h3>
-    <small>23 يوليو 2026</small>
-    <p>
-      أهلاً بكم في موقعي الشخصي. سأشارك هنا آخر أخباري وأعمالي ومشاريعي الجديدة.
-    </p>
-  </div>
+#topBtn{
 
-  <div style="background:white;padding:20px;border-radius:12px;max-width:700px;margin:auto 0 20px auto;box-shadow:0 0 10px rgba(0,0,0,.1);">
-    <h3>مشروع جديد</h3>
-    <small>قريباً</small>
-    <p>
-      أعمل حالياً على تطوير موقعي وإضافة خدمات جديدة، انتظروا التحديثات.
-    </p>
-  </div>
+position:fixed;
 
-</section>
+bottom:20px;
+
+left:20px;
+
+display:none;
+
+border:none;
+
+background:#1565c0;
+
+color:white;
+
+padding:14px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:18px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+}
+
+</style>
+
+<script>
+
+const btn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+
+btn.style.display="block";
+
+}else{
+
+btn.style.display="none";
+
+}
+
+};
+
+btn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
+
 </body>
-</html>
+
 </html>
