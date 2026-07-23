@@ -58,4 +58,38 @@ section{
     padding:20px;
     margin-bottom:20px;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
-    }
+    }.hero{
+    background:linear-gradient(135deg,#0b3d91,#1f6feb);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+    border-radius:0 0 25px 25px;
+}
+
+.hero h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:white;
+    color:#0b3d91;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+} 
