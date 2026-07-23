@@ -100,4 +100,10 @@ section{
     border:5px solid white;
     box-shadow:0 10px 25px rgba(0,0,0,.3);
     margin-bottom:25px;
+} .news-bar{
+    background:#d60000;
+    color:white;
+    padding:10px;
+    font-weight:bold;
+    font-size:18px;
 } 
